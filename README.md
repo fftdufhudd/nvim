@@ -1,6 +1,6 @@
 # Installation
 ## 1. Clone the repo:
-    git clone https://github.com/fftdufhudd/nvim.git /your/local/directory
+    git clone https://github.com/fftdufhudd/nvim.git ~/.config/nvim
 ## 2. Install dependencies:
     chmod +x install.sh && ./install.sh
 ## 3. Manual steps:
