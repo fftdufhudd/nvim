@@ -1,16 +1,17 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>q", vim.cmd.q)
 vim.keymap.set("n", "<leader>t", vim.cmd.terminal)
+vim.keymap.set("n", "<leader>s", vim.cmd.split)
 
 local function set_cwd_to_explorer_root()
     -- Get the filetype of the current buffer
     local ft = vim.bo.filetype
-    
+
     -- Check for common file explorer filetypes: Netrw (dirbuf, netrw) or NvimTree
     if ft == 'dirbuf' or ft == 'netrw' or ft == 'NvimTree' then
         -- Get the full path of the current buffer (which is the directory path)
         local dir_path = vim.fn.expand('%')
-        
+
         -- Change the CWD to that path
         vim.cmd.cd(dir_path)
         print("CWD changed to: " .. dir_path)
